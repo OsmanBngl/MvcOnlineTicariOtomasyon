@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">Giriş Yap »</a>
                 </div>
                 <div class="register-in">
-                    <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog1">Persoel Girişi »</a>
+                    <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog1">Personel Girişi »</a>
                 </div>
                 <div class="clear"> </div>
             </div>
@@ -127,13 +127,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="agile-row">
                     <h3>Personel Formu Girişi</h3>
                      <div class="clear"></div>
-                    <div class="login-agileits-top">
-                        <form action="#" method="post">
-                            <input type="text" class="name" name="name" Placeholder="Kullanıcı Adı" required="" />
-                            <input type="password" class="password" name="sifre" Placeholder="Şifre" required="" />
-                            <input type="submit" value="Get Notified">
-                        </form>
-                    </div>
+                     <div class="login-agileits-top">
+                         @using (Html.BeginForm("AdminLogin", "Login", FormMethod.Post))
+                         {
+                             <input type="text" class="name" name="KullaniciAd" Placeholder="Kullanıcı Adı" required="" />
+                             <input type="password" class="password" name="Sifre" Placeholder="Şifre" required="" />
+                             <input type="submit" value="Giriş yap">
+                         }
+                         </div>
                 </div>
             </div>
 
